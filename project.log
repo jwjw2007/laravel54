@@ -1,4 +1,7 @@
 
+项目统一域名:
+    js.com
+
 1. 下载项目：
     composer create-project laravel/laravel laravel54 "5.4.*"
 
