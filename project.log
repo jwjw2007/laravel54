@@ -1,0 +1,15 @@
+
+1. 下载项目：
+    composer create-project laravel/laravel laravel54 "5.4.*"
+
+2. 本地启动项目：
+    php artisan serve
+    或者  php artisan serve --port=8888
+
+3. 保证项目的storage具有读写权限
+4. 创建数据库迁移文件表:
+    php artisan migrate:install
+
+
+
+
