@@ -18,8 +18,11 @@
         try_files $uri $uri/ /index.php?$query_string;
     }
 
-
-
+6. 注意路由的先后顺序，有时候如果不规定路由参数的类型，会导致错误的路由拦截：
+    Route::get('/posts/create', '\App\Http\Controllers\PostController@create');
+    Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show');
+    先后顺序的不一样，会出现不同的页面跳转，一定要规定参数的类型
+    
 
 
 
