@@ -22,7 +22,9 @@
     Route::get('/posts/create', '\App\Http\Controllers\PostController@create');
     Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show');
     先后顺序的不一样，会出现不同的页面跳转，一定要规定参数的类型
-    
+
+7. 引用wangeditor.js编辑器时，css、fonts、js这三个目录都要存在，并且要在同一级。
+
 
 
 
