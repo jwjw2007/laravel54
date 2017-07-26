@@ -14,7 +14,8 @@ class PostController extends Controller {
 
     //文章详情页
     public function show() {
-        return view('post/show');
+        $isShow = false;
+        return view('post/show', compact('isShow'));
     }
 
     //文章添加页
