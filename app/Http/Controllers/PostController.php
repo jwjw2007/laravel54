@@ -9,17 +9,17 @@ class PostController extends Controller {
 
     //文章列表页
     public function index() {
-     echo 'fffffffff';
+        return view('post/index');
     }
 
     //文章详情页
     public function show() {
-
+        return view('post/show');
     }
 
     //文章添加页
     public function create() {
-
+        return view('post/create');
     }
 
     //文章添加逻辑
@@ -29,7 +29,7 @@ class PostController extends Controller {
 
     //文章编辑页
     public function edit() {
-
+        return view('post/edit');
     }
 
     //文章编辑逻辑
