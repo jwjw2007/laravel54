@@ -27,5 +27,10 @@
 8. php artisan tinker
    用来直接测试使用模型，避免总是去创建路由规则
 
+9. 使用php artisan tinker 进行数据填充
+    factory(App\Post::class,20)->create();
+
+
+
 
 
