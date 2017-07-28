@@ -16,7 +16,6 @@ class PostController extends Controller {
 
     //文章详情页
     public function show(Post $post) {
-
         return view('post/show', compact('post'));
     }
 
@@ -27,7 +26,14 @@ class PostController extends Controller {
 
     //文章添加逻辑
     public function store() {
-        Post::create(request(['title','content']));
+        //验证
+        $this->validate(request(), [
+            'title' => 'required|string|max:100|min:5',
+            'content' => 'required|string|min:10'
+        ]);
+        //逻辑
+        Post::create(request(['title', 'content']));
+        //渲染
         return redirect('posts');
     }
 
@@ -45,4 +51,12 @@ class PostController extends Controller {
     public function delete() {
 
     }
+
+    //图片上传
+    public function imageUpload(Request $request) {
+        $path = $request->file('wangEditorH5File')->storePublicly(md5(time()));
+        return assert('storage/' . $path);
+    }
+
+
 }
