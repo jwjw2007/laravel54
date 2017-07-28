@@ -27,7 +27,8 @@ class PostController extends Controller {
 
     //文章添加逻辑
     public function store() {
-
+        Post::create(request(['title','content']));
+        return redirect('posts');
     }
 
     //文章编辑页
