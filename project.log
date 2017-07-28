@@ -31,6 +31,14 @@
     factory(App\Post::class,20)->create();
 
 10. php artisan storage:link
+    storage/app/public 目录用于存储用户生成的文件，比如可以被公开访问的用户头像，要达到被访问的目的，
+    你还需要在public目录下生成一个软连接 storage 指向这个目录。
+    你可以通过 php artisan storage:link 命令生成这个软链接。
+
+11. 文件上传时需要开始php的  php_fileinfo扩展
+12. 文件上传需要配置\config\filesystems.php 文件的配置项：
+    'default' => 'public',
+
 
 
 
