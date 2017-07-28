@@ -30,7 +30,7 @@
 9. 使用php artisan tinker 进行数据填充
     factory(App\Post::class,20)->create();
 
-10. php artisan storage:link
+10. php artisan storage:link  (记得使用此命令生成软连接进行图片资源访问，需要在每台机器上都执行)
     storage/app/public 目录用于存储用户生成的文件，比如可以被公开访问的用户头像，要达到被访问的目的，
     你还需要在public目录下生成一个软连接 storage 指向这个目录。
     你可以通过 php artisan storage:link 命令生成这个软链接。
