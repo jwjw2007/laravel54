@@ -30,6 +30,9 @@
 9. 使用php artisan tinker 进行数据填充
     factory(App\Post::class,20)->create();
 
+10. php artisan storage:link
+
+
 
 
 
