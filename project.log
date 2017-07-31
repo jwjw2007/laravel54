@@ -57,6 +57,9 @@
     1. php artisan tinker 下执行 app('log');
     2. https://laravel.com/api/5.4/index.html
 
+16. 在实现前台注册登录以及用户认证的相关操作时不建议使用laravel自带的auth组件，因为该组件对实际需求不匹配，
+    修改起来成本过大，不如自主开发，后台用户登录可根据需求进行使用。
+
 
 
 
