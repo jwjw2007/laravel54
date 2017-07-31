@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-07-28 18:21:15
+Date: 2017-07-31 17:28:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -88,8 +88,6 @@ INSERT INTO `posts` VALUES ('20', 'Ducimus possimus qui totam reprehenderit non 
 INSERT INTO `posts` VALUES ('21', 'Sint est voluptatem cumque eveniet.', 'Et repudiandae assumenda odio nesciunt laudantium. Earum enim aliquid iure qui ipsa. Aliquam et quas dolores dolores. Enim est magnam modi rem quia ea.\nVoluptates numquam atque odio ut. Occaecati sed sit beatae porro porro molestias tenetur. Rerum a quia et. Aliquid sunt veritatis quis fugit.\nLaborum quam quam soluta consectetur ut quia eius. Consequuntur omnis et quasi inventore dolores. Magni sit aliquam placeat ut magnam cupiditate quasi.', '0', '2017-07-27 13:56:24', '2017-07-27 13:56:24');
 INSERT INTO `posts` VALUES ('22', 'dddddddddd', '<p>dddddddddddddddddddddddddd<br></p>', '0', '2017-07-28 09:02:22', '2017-07-28 09:02:22');
 INSERT INTO `posts` VALUES ('23', 'ggggggggggggggg', '<p>ggg<br></p>', '0', '2017-07-28 09:02:29', '2017-07-28 09:02:29');
-INSERT INTO `posts` VALUES ('24', 'gdfgsdfg', '<p>dfgdfgdgdfgdf<br></p>', '0', '2017-07-28 09:02:43', '2017-07-28 09:02:43');
-INSERT INTO `posts` VALUES ('25', 'fdgsdfgsdfgf', '<p>fgsdfgdfgdfgsdgdf</p><p>fgdgdfgdfg</p><p><img src=\"http://js.com/storage/4fee960d64369213751f0f7fb662a662/UNPd2Wp00zs4mhcxviusbmu7n8OWSjMDLoEMhjNO.jpeg\" alt=\"bgdf\" style=\"max-width:100%;\"></p><p><br></p>', '0', '2017-07-28 18:13:44', '2017-07-28 18:13:44');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -105,8 +103,9 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
+INSERT INTO `users` VALUES ('1', 'qweqw', 'sdsad@qq.com', '$2y$10$NzOS8J76rwKzANM0PgYFVeNBo.anL5iFo68wuiCz7TS56YqATSwDK', null, '2017-07-31 13:56:12', '2017-07-31 13:56:12');
