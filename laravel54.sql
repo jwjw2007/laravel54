@@ -1,19 +1,40 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : 127
 Source Server Version : 50553
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-01 14:23:33
+Date: 2017-08-01 22:31:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `comments`
+-- ----------------------------
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE `comments` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of comments
+-- ----------------------------
+INSERT INTO `comments` VALUES ('1', '22', '2', 'ffffffffffff', '2017-08-01 22:12:46', '2017-08-01 22:12:46');
+INSERT INTO `comments` VALUES ('2', '22', '2', 'gggggggggggggg', '2017-08-01 22:27:53', '2017-08-01 22:27:53');
+INSERT INTO `comments` VALUES ('3', '22', '2', 'ddddddddddddddddd', '2017-08-01 22:27:56', '2017-08-01 22:27:56');
 
 -- ----------------------------
 -- Table structure for `migrations`
@@ -24,7 +45,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -32,6 +53,7 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` VALUES ('1', '2014_10_12_000000_create_users_table', '1');
 INSERT INTO `migrations` VALUES ('2', '2014_10_12_100000_create_password_resets_table', '1');
 INSERT INTO `migrations` VALUES ('3', '2017_07_26_143716_create_posts_table', '1');
+INSERT INTO `migrations` VALUES ('4', '2017_08_01_212242_create_comments_table', '2');
 
 -- ----------------------------
 -- Table structure for `password_resets`
