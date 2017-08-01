@@ -62,8 +62,31 @@
 
 17. 用户授权Policy
     1. 定义策略类
+        php artisan make:policy PostPolicy
+
+        //定义更新策略
+        public function update(User $user, Post $post) {
+                return $user->id == $post->user_id;
+        }
     2. 注册策略类和模型关联
+        D:\phpStudy\WWW\laravel54\app\Providers\AuthServiceProvider.php
+        //注册策略
+        protected $policies = [
+                //'App\Model' => 'App\Policies\ModelPolicy',
+                'App\Post' => 'App\Policies\PostPolicy',
+            ];
+
+        D:\phpStudy\WWW\laravel54\app\Post.php
+        //关联模型
+        public function user() {
+                return $this->belongsTo(\App\User::class,'user_id','id');
+        }
     3. 策略判断
+        D:\phpStudy\WWW\laravel54\app\Http\Controllers\PostController.php
+        $this->authorize('update',$post);
+
+        //模板判断
+        @if (Auth::user()->can('update', $post))
 
 
 
