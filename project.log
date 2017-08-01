@@ -88,6 +88,13 @@
         //模板判断
         @if (Auth::user()->can('update', $post))
 
+18. 关联模型预加载
+    前提：已经创建模型之间的关联方法
+    三种方式:
+    1. $books=App\Book::with('author')->get();
+    2. $books->load('author');
+    3. 直接调用模型关联方法  $books->authors;
+
 
 
 
