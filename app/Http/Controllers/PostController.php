@@ -107,7 +107,7 @@ class PostController extends Controller {
         return back();
 
     }
-    
+
     //取消赞
     public function unzan(Post $post) {
         $post->zan(\Auth::id())->delete();
