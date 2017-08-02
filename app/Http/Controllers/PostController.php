@@ -13,7 +13,7 @@ class PostController extends Controller {
     //文章列表页
     public function index() {
         $posts = Post::orderBy('created_at', ' desc')
-            ->withCount(['comments','zans'])
+            ->withCount(['comments', 'zans'])
             ->paginate(6);
         return view('post/index', compact('posts'));
     }
@@ -99,9 +99,9 @@ class PostController extends Controller {
 
     //赞
     public function zan(Post $post) {
-        $params=[
-            'user_id'=>\Auth::id(),
-            'post_id'=>$post->id
+        $params = [
+            'user_id' => \Auth::id(),
+            'post_id' => $post->id
         ];
         Zan::firstOrCreate($params);
         return back();
