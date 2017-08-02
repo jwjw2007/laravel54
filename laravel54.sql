@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-02 08:50:40
+Date: 2017-08-02 09:14:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -143,8 +143,10 @@ CREATE TABLE `zans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of zans
 -- ----------------------------
+INSERT INTO `zans` VALUES ('3', '22', '2', '2017-08-02 09:13:53', '2017-08-02 09:13:53');
+INSERT INTO `zans` VALUES ('4', '2', '2', '2017-08-02 09:14:00', '2017-08-02 09:14:00');
