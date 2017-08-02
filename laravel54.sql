@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-02 09:14:32
+Date: 2017-08-02 17:02:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `comments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of comments
@@ -35,6 +35,9 @@ CREATE TABLE `comments` (
 INSERT INTO `comments` VALUES ('1', '22', '2', 'ffffffffffff', '2017-08-01 22:12:46', '2017-08-01 22:12:46');
 INSERT INTO `comments` VALUES ('2', '22', '2', 'gggggggggggggg', '2017-08-01 22:27:53', '2017-08-01 22:27:53');
 INSERT INTO `comments` VALUES ('3', '22', '2', 'ddddddddddddddddd', '2017-08-01 22:27:56', '2017-08-01 22:27:56');
+INSERT INTO `comments` VALUES ('4', '6', '2', 'hjhhhhhhhhhhhhhhhhhhhhhhhhh', '2017-08-02 10:15:06', '2017-08-02 10:15:06');
+INSERT INTO `comments` VALUES ('5', '3', '1', 'gggggggggggggggg', '2017-08-02 17:01:25', '2017-08-02 17:01:25');
+INSERT INTO `comments` VALUES ('6', '3', '1', 'sssssssssssssssssssssssssssssssssssss', '2017-08-02 17:01:30', '2017-08-02 17:01:30');
 
 -- ----------------------------
 -- Table structure for `migrations`
@@ -143,10 +146,12 @@ CREATE TABLE `zans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of zans
 -- ----------------------------
 INSERT INTO `zans` VALUES ('3', '22', '2', '2017-08-02 09:13:53', '2017-08-02 09:13:53');
 INSERT INTO `zans` VALUES ('4', '2', '2', '2017-08-02 09:14:00', '2017-08-02 09:14:00');
+INSERT INTO `zans` VALUES ('5', '6', '2', '2017-08-02 10:15:08', '2017-08-02 10:15:08');
+INSERT INTO `zans` VALUES ('6', '3', '1', '2017-08-02 17:01:20', '2017-08-02 17:01:20');
