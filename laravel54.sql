@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127
+Source Server         : 127.0.0.1
 Source Server Version : 50553
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-01 22:31:42
+Date: 2017-08-02 08:50:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,7 +45,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -54,6 +54,7 @@ INSERT INTO `migrations` VALUES ('1', '2014_10_12_000000_create_users_table', '1
 INSERT INTO `migrations` VALUES ('2', '2014_10_12_100000_create_password_resets_table', '1');
 INSERT INTO `migrations` VALUES ('3', '2017_07_26_143716_create_posts_table', '1');
 INSERT INTO `migrations` VALUES ('4', '2017_08_01_212242_create_comments_table', '2');
+INSERT INTO `migrations` VALUES ('5', '2017_08_02_084755_create_zans_table', '3');
 
 -- ----------------------------
 -- Table structure for `password_resets`
@@ -130,3 +131,20 @@ CREATE TABLE `users` (
 -- ----------------------------
 INSERT INTO `users` VALUES ('1', 'aaa', 'aaa@qq.com', '$2y$10$NzOS8J76rwKzANM0PgYFVeNBo.anL5iFo68wuiCz7TS56YqATSwDK', '1UE7KqW67WQNzjvYvzsMsavLxNfyGATLGdhbRXCA8GHBjxSzP4eUeUOUnQD5', '2017-07-31 13:56:12', '2017-07-31 13:56:12');
 INSERT INTO `users` VALUES ('2', 'qqq', 'qqq@qq.com', '$2y$10$BJQGELktbstTvGT2GEaK/Oczx95HwJWsMy5yT9aRJAjVzYtQxusQu', 'zwSYdZrdWgkEvvkvJAoLKrat27g5kWx5MpngaigPTKiGQ9d9f6TqlWD7qkqb', '2017-08-01 08:54:26', '2017-08-01 08:54:26');
+
+-- ----------------------------
+-- Table structure for `zans`
+-- ----------------------------
+DROP TABLE IF EXISTS `zans`;
+CREATE TABLE `zans` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of zans
+-- ----------------------------
