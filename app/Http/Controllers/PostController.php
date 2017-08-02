@@ -13,7 +13,7 @@ class PostController extends Controller {
     //文章列表页
     public function index() {
         $posts = Post::orderBy('created_at', ' desc')
-            ->withCount('comments')
+            ->withCount(['comments','zans'])
             ->paginate(6);
         return view('post/index', compact('posts'));
     }
