@@ -6,6 +6,7 @@ use App\Comment;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use  App\Zan;
 
 class PostController extends Controller {
 
@@ -94,6 +95,22 @@ class PostController extends Controller {
         //渲染
         return back();
 
+    }
+
+    //赞
+    public function zan(Post $post) {
+        $params=[
+            'user_id'=>\Auth::id(),
+            'post_id'=>$post->id
+        ];
+        Zan::firstOrCreate($params);
+        return back();
+
+    }
+    //取消赞
+    public function unzan(Post $post) {
+        $post->zan(\Auth::id())->delete();
+        return back();
     }
 
 }

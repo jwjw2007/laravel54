@@ -5,26 +5,26 @@
             <div style="display:inline-flex">
                 <h2 class="blog-post-title">{{$post->title}}</h2>
                 @if (Auth::user()->can('update', $post))
-                <a style="margin: auto" href="/posts/{{$post->id}}/edit">
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                </a>
+                    <a style="margin: auto" href="/posts/{{$post->id}}/edit">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </a>
                 @endif
                 @if (Auth::user()->can('delete', $post))
-                <a style="margin: auto" href="/posts/{{$post->id}}/delete">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </a>
+                    <a style="margin: auto" href="/posts/{{$post->id}}/delete">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </a>
                 @endif
             </div>
 
-            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} by <a href="#">{{$post->user->name}}</a></p>
-
-            <p>
-            <p>{!!$post->content !!}
-                <img src="http://127.0.0.1:8000/storage/72c76b674ec8793fcfd6555ff371bfbd/nxC9ozLfkORmoY92q9lPsejXchVvdNO2cwHiR2Jf.jpeg"
-                     alt="63" style="max-width: 100%;">你好你好似懂非懂说</p>
-            <p><br></p></p>
+            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} by <a
+                        href="#">{{$post->user->name}}</a></p>
+            <p>{!!$post->content !!}</p>
             <div>
-                <a href="/posts/{{$post->id}}/zan" type="button" class="btn btn-primary btn-lg">赞</a>
+                @if($post->zan(\Auth::id())->exists())
+                    <a href="/posts/{{$post->id}}/unzan" type="button" class="btn btn-default btn-lg">取消赞</a>
+                @else
+                    <a href="/posts/{{$post->id}}/zan" type="button" class="btn btn-primary btn-lg">赞</a>
+                @endif
 
             </div>
         </div>
@@ -36,10 +36,10 @@
             <!-- List group -->
             <ul class="list-group">
                 @foreach($post->comments as $comment)
-                <li class="list-group-item">
-                    <h5>{{$comment->created_at}} by {{$comment->user->name}}</h5>
-                    <div>{{$comment->content}}</div>
-                </li>
+                    <li class="list-group-item">
+                        <h5>{{$comment->created_at}} by {{$comment->user->name}}</h5>
+                        <div>{{$comment->content}}</div>
+                    </li>
                 @endforeach
             </ul>
         </div>
