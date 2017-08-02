@@ -95,6 +95,9 @@
     2. $books->load('author');
     3. 直接调用模型关联方法  $books->authors;
 
+19. elasticsearch集成安装环境
+    https://github.com/medcl/elasticsearch-rtf
+
 
 
 
