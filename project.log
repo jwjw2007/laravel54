@@ -151,7 +151,7 @@
                 \App\Console\Commands\EsInit::class
             ];
     4. php artisan 验证命令是否生成
-    
+
 
 
 

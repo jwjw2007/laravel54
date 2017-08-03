@@ -114,4 +114,17 @@ class PostController extends Controller {
         return back();
     }
 
+    /*
+     * 搜索页面
+     */
+    public function search() {
+        $this->validate(request(), [
+            'query' => 'required'
+        ]);
+
+        $query = request('query');
+        $posts = Post::search(request('query'))->paginate(10);
+        return view('post/search', compact('posts', 'query'));
+    }
+
 }

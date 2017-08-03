@@ -30,6 +30,8 @@ Route::post('/user/me/setting','UserController@settingStore');
 
 //文章列表
 Route::get('/posts', '\App\Http\Controllers\PostController@index');
+//文章搜索
+Route::get('/posts/search', '\App\Http\Controllers\PostController@search');
 //文章详情
 Route::get('/posts/{post}', '\App\Http\Controllers\PostController@show')
     ->where('post', '[0-9]+');
