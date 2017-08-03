@@ -5,7 +5,8 @@ namespace App\Console\Commands;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 
-class EsInit extends Command {
+class ESInit extends Command
+{
     /**
      * The name and signature of the console command.
      *
@@ -18,14 +19,15 @@ class EsInit extends Command {
      *
      * @var string
      */
-    protected $description = 'init laravel es for post';
+    protected $description = 'init es';
 
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
     }
 
@@ -34,7 +36,8 @@ class EsInit extends Command {
      *
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         $client = new Client();
         // 创建模版
         $url = config('scout.elasticsearch.hosts')[0] . '/_template/tmp';
@@ -88,5 +91,6 @@ class EsInit extends Command {
                 ]
             ]
         ]);
+
     }
 }
