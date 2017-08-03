@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : 127
 Source Server Version : 50553
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-02 17:02:15
+Date: 2017-08-03 23:35:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,7 +86,7 @@ CREATE TABLE `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of posts
@@ -112,6 +112,8 @@ INSERT INTO `posts` VALUES ('19', 'Ad neque esse ea omnis ut.', 'Cumque ab volup
 INSERT INTO `posts` VALUES ('20', 'Ducimus possimus qui totam reprehenderit non magni ex.', 'Vel magni voluptatum consequuntur sapiente. Nisi consequatur magni culpa saepe. Odio maxime est doloribus tempore consectetur iste magnam corporis.\nRatione tenetur aut et aut. Dolor eius qui accusamus aut unde laborum. Blanditiis corporis esse ea beatae qui. Eum labore eos illum rem accusamus ea quia.\nIn omnis repellendus error non unde aperiam. Expedita a harum qui et. Consequuntur dolorem debitis soluta dolores. Exercitationem unde ut in sunt est rerum ipsa accusantium.', '1', '2017-07-27 13:56:24', '2017-07-27 13:56:24');
 INSERT INTO `posts` VALUES ('21', 'Sint est voluptatem cumque eveniet.', 'Et repudiandae assumenda odio nesciunt laudantium. Earum enim aliquid iure qui ipsa. Aliquam et quas dolores dolores. Enim est magnam modi rem quia ea.\nVoluptates numquam atque odio ut. Occaecati sed sit beatae porro porro molestias tenetur. Rerum a quia et. Aliquid sunt veritatis quis fugit.\nLaborum quam quam soluta consectetur ut quia eius. Consequuntur omnis et quasi inventore dolores. Magni sit aliquam placeat ut magnam cupiditate quasi.', '1', '2017-07-27 13:56:24', '2017-07-27 13:56:24');
 INSERT INTO `posts` VALUES ('22', 'dddddddddd', '<p>dddddddddddddddddddddddddd<br></p>', '1', '2017-07-28 09:02:22', '2017-07-28 09:02:22');
+INSERT INTO `posts` VALUES ('26', 'ggggggggggggg', '<p>ggggggggggggggggggggggggdfgdfsgdfsgdfsgdfgdfsgdfsgdfgdfgdfsgdfgdf<br></p>', '2', '2017-08-03 23:30:01', '2017-08-03 23:30:01');
+INSERT INTO `posts` VALUES ('27', '地方公司的法国', '<p>的非官方大哥大法官个梵蒂冈fdgf个地方官fdf</p><p>发电公司梵蒂冈地方和法规和</p><p>梵蒂冈和符合规范化</p><p>法规和规范hfhfg法国恢复供货</p><p>法国恢复供货皇贵妃公检法地方人员让他恢复规划f<br></p>', '2', '2017-08-03 23:33:56', '2017-08-03 23:33:56');
 
 -- ----------------------------
 -- Table structure for `users`
