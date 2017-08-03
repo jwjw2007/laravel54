@@ -97,7 +97,47 @@
 
 19. elasticsearch集成安装环境
     https://github.com/medcl/elasticsearch-rtf
+    1.运行环境
+        a.JDK8+
+        b.系统可用内存>2G
+    2.下载
+        git clone git://github.com/medcl/elasticsearch-rtf.git -b master --depth 1
+        百度网盘：https://pan.baidu.com/s/1pJNkrUV
+    3.运行
+        Mac/Linux:
+            cd elasticsearch/bin
+            ./elasticsearch
+            sudo -u ops ES_JAVA_OPTS="-Xms2024m -Xmx2024m"  ./bin/elasticsearch  -d
+        Windows:
+            cd elasticsearch/bin
+            elasticsearch.bat
+    安装完成后查看：http://127.0.0.1:9200/
 
+    4. 增加scout驱动
+        4.1 composer require laravel/scout
+        4.2 在config/app.php 配置文件的 providers 数组中增加：
+             Laravel\Scout\ScoutServiceProvider::class,
+        4.3 运行:
+            php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+            在config目录下生成 scout.php 配置文件
 
+    5. 增加laravel的scout的jdk
+       5.1  下载sdk：
+            https://github.com/ErickTamayo/laravel-scout-elastic
+       5.2  composer require tamayo/laravel-scout-elastic
+       5.3 在config/app.php 配置文件的 providers 数组中增加：
+        'providers' => [
+            ...
+            Laravel\Scout\ScoutServiceProvider::class,
+            ...
+            ScoutEngines\Elasticsearch\ElasticsearchProvider::class,
+        ],
+        5.4  修改scout.php文件驱动：
+            'driver' => env('SCOUT_DRIVER', 'elasticsearch'),//定义驱动名称
 
-
+            'elasticsearch' => [
+                'index' => env('ELASTICSEARCH_INDEX', 'laravel'),//设置索引名称
+                'hosts' => [
+                    env('ELASTICSEARCH_HOST', 'http://127.0.0.1:9200'),//设置访问接口
+                ],
+            ],
