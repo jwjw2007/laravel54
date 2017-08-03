@@ -141,3 +141,17 @@
                     env('ELASTICSEARCH_HOST', 'http://127.0.0.1:9200'),//设置访问接口
                 ],
             ],
+
+20. 创建自定义命令
+    1.  php artisan make:command EsInit //生成自定义命令文件
+    2. 修改/app/Console/Commands/EsInit.php中
+        $signature = 'es:init'; //设置命令格式
+    3. /app/Console/Kernel.php中挂载命令
+        $commands = [
+                \App\Console\Commands\EsInit::class
+            ];
+    4. php artisan 验证命令是否生成
+    
+
+
+
