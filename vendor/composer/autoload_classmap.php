@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Comment' => $baseDir . '/app/Comment.php',
-    'App\\Console\\Commands\\EsInit' => $baseDir . '/app/Console/Commands/EsInit.php',
+    'App\\Console\\Commands\\ESInit' => $baseDir . '/app/Console/Commands/EsInit.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -67,6 +67,7 @@ return array(
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2017_08_01_212242_create_comments_table.php',
+    'CreateFansTable' => $baseDir . '/database/migrations/2017_08_04_111823_create_fans_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2017_07_26_143716_create_posts_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',

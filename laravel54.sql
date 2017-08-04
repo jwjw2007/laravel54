@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-04 10:20:33
+Date: 2017-08-04 11:21:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,6 +40,23 @@ INSERT INTO `comments` VALUES ('5', '3', '1', 'gggggggggggggggg', '2017-08-02 17
 INSERT INTO `comments` VALUES ('6', '3', '1', 'sssssssssssssssssssssssssssssssssssss', '2017-08-02 17:01:30', '2017-08-02 17:01:30');
 
 -- ----------------------------
+-- Table structure for `fans`
+-- ----------------------------
+DROP TABLE IF EXISTS `fans`;
+CREATE TABLE `fans` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `fan_id` int(11) NOT NULL,
+  `star_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of fans
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `migrations`
 -- ----------------------------
 DROP TABLE IF EXISTS `migrations`;
@@ -48,7 +65,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -58,6 +75,7 @@ INSERT INTO `migrations` VALUES ('2', '2014_10_12_100000_create_password_resets_
 INSERT INTO `migrations` VALUES ('3', '2017_07_26_143716_create_posts_table', '1');
 INSERT INTO `migrations` VALUES ('4', '2017_08_01_212242_create_comments_table', '2');
 INSERT INTO `migrations` VALUES ('5', '2017_08_02_084755_create_zans_table', '3');
+INSERT INTO `migrations` VALUES ('6', '2017_08_04_111823_create_fans_table', '4');
 
 -- ----------------------------
 -- Table structure for `password_resets`
