@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-04 11:21:15
+Date: 2017-08-04 15:36:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,11 +50,13 @@ CREATE TABLE `fans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of fans
 -- ----------------------------
+INSERT INTO `fans` VALUES ('11', '2', '1', '2017-08-04 15:34:49', '2017-08-04 15:34:49');
+INSERT INTO `fans` VALUES ('8', '1', '2', '2017-08-04 15:33:52', '2017-08-04 15:33:52');
 
 -- ----------------------------
 -- Table structure for `migrations`

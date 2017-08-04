@@ -24,6 +24,12 @@ Route::post('/login','LoginController@login');
 Route::get('/logout','LoginController@logout');
 //个人设置
 Route::get('/user/me/setting','UserController@setting');
+//个人中心
+Route::get('/user/{user}','UserController@show');
+//关注
+Route::post('/user/{user}/fan','UserController@fan');
+//取消关注
+Route::post('/user/{user}/unfan','UserController@unfan');
 //个人设置操作
 Route::post('/user/me/setting','UserController@settingStore');
 
