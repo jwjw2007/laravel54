@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127
+Source Server         : 127.0.0.1
 Source Server Version : 50553
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-03 23:35:16
+Date: 2017-08-04 10:20:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,7 +86,7 @@ CREATE TABLE `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of posts
@@ -112,8 +112,7 @@ INSERT INTO `posts` VALUES ('19', 'Ad neque esse ea omnis ut.', 'Cumque ab volup
 INSERT INTO `posts` VALUES ('20', 'Ducimus possimus qui totam reprehenderit non magni ex.', 'Vel magni voluptatum consequuntur sapiente. Nisi consequatur magni culpa saepe. Odio maxime est doloribus tempore consectetur iste magnam corporis.\nRatione tenetur aut et aut. Dolor eius qui accusamus aut unde laborum. Blanditiis corporis esse ea beatae qui. Eum labore eos illum rem accusamus ea quia.\nIn omnis repellendus error non unde aperiam. Expedita a harum qui et. Consequuntur dolorem debitis soluta dolores. Exercitationem unde ut in sunt est rerum ipsa accusantium.', '1', '2017-07-27 13:56:24', '2017-07-27 13:56:24');
 INSERT INTO `posts` VALUES ('21', 'Sint est voluptatem cumque eveniet.', 'Et repudiandae assumenda odio nesciunt laudantium. Earum enim aliquid iure qui ipsa. Aliquam et quas dolores dolores. Enim est magnam modi rem quia ea.\nVoluptates numquam atque odio ut. Occaecati sed sit beatae porro porro molestias tenetur. Rerum a quia et. Aliquid sunt veritatis quis fugit.\nLaborum quam quam soluta consectetur ut quia eius. Consequuntur omnis et quasi inventore dolores. Magni sit aliquam placeat ut magnam cupiditate quasi.', '1', '2017-07-27 13:56:24', '2017-07-27 13:56:24');
 INSERT INTO `posts` VALUES ('22', 'dddddddddd', '<p>dddddddddddddddddddddddddd<br></p>', '1', '2017-07-28 09:02:22', '2017-07-28 09:02:22');
-INSERT INTO `posts` VALUES ('26', 'ggggggggggggg', '<p>ggggggggggggggggggggggggdfgdfsgdfsgdfsgdfgdfsgdfsgdfgdfgdfsgdfgdf<br></p>', '2', '2017-08-03 23:30:01', '2017-08-03 23:30:01');
-INSERT INTO `posts` VALUES ('27', '地方公司的法国', '<p>的非官方大哥大法官个梵蒂冈fdgf个地方官fdf</p><p>发电公司梵蒂冈地方和法规和</p><p>梵蒂冈和符合规范化</p><p>法规和规范hfhfg法国恢复供货</p><p>法国恢复供货皇贵妃公检法地方人员让他恢复规划f<br></p>', '2', '2017-08-03 23:33:56', '2017-08-03 23:33:56');
+INSERT INTO `posts` VALUES ('26', '《麦田里的守望者》：独处的时候，藏着一个人最真实的人品', '<p>醒来后，霍尔顿先是给萨丽·海斯打电话，希望她能出来和自己约会。老萨丽同样是一个假模假式的姑娘。在答应霍尔顿一起看日戏后，老萨丽开始吹嘘什么“有个哈佛学生拼命追她，日日夜夜给她打电话”，还有“什么西点军校的，也为她寻死觅活”，同时呢似乎是为了显示矜持她又总是迟到。</p><p>这样的场景是不是在我们现实的生活里也很常见？一场社交，即使只有两个人，也是一次惊心动魄的博弈。通过迟到，通过显示自己有多么的受欢迎，来获得交际时的主动权。当然，如果约会双方确实存在地位差异（除去社会地位差异还有基本的邀请者地位低于被邀请者），那么这样的放肆将被忍受。</p><p>虽然我们的霍尔顿在心里想着，“一时间，我真想叫她忘记看日戏这回事吧”。可是霍尔顿也有自己的苦衷，他太无聊又太烦闷了，因而他不得不和假模假式的老萨丽约会。</p><p>“我跟老萨丽定好约会后，就从床上起来，穿好衣服，然后整理行装。我离开房间之前又往窗外望了望，看看所有那些心理变态的家伙都在干什么，可他们全把窗帘拉上了。到了早上，他们都成了谦虚谨慎的君子淑女。”</p><p>儒家思想里有个概念叫“慎独”，说的是一个人一旦独自待在一个没有其他人的地方，便会容易会想要做一些肮脏龌蹉，或者其他不被传统伦理道德接受的事情。因而君子要“慎独”，既要尽可能避免自己处于那种境地，也要在处于“独”境时保持警惕。</p><p>黑夜，独居，以及人的思想，这些都是“独”境，值得我们警惕。那么，霍尔顿接下来会有什么样的行为呢？</p><br><br><p>作者：麦家理想谷</p><br><p>链接：http://www.jianshu.com/p/333660fd41c9</p><br><p>來源：简书</p><br><p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><p><br></p>', '2', '2017-08-04 09:59:32', '2017-08-04 09:59:32');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -148,7 +147,7 @@ CREATE TABLE `zans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of zans
@@ -157,3 +156,4 @@ INSERT INTO `zans` VALUES ('3', '22', '2', '2017-08-02 09:13:53', '2017-08-02 09
 INSERT INTO `zans` VALUES ('4', '2', '2', '2017-08-02 09:14:00', '2017-08-02 09:14:00');
 INSERT INTO `zans` VALUES ('5', '6', '2', '2017-08-02 10:15:08', '2017-08-02 10:15:08');
 INSERT INTO `zans` VALUES ('6', '3', '1', '2017-08-02 17:01:20', '2017-08-02 17:01:20');
+INSERT INTO `zans` VALUES ('7', '22', '1', '2017-08-02 17:43:17', '2017-08-02 17:43:17');
