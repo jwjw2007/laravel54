@@ -9,18 +9,18 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * @method ResponseInterface get(string|UriInterface $uri, array $options = [])
- * @method ResponseInterface head(string|UriInterface $uri, array $options = [])
- * @method ResponseInterface put(string|UriInterface $uri, array $options = [])
- * @method ResponseInterface post(string|UriInterface $uri, array $options = [])
- * @method ResponseInterface patch(string|UriInterface $uri, array $options = [])
- * @method ResponseInterface delete(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface getAsync(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface headAsync(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface putAsync(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface postAsync(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface patchAsync(string|UriInterface $uri, array $options = [])
- * @method Promise\PromiseInterface deleteAsync(string|UriInterface $uri, array $options = [])
+ * @method ResponseInterface get(stringUriInterface $uri, array $options = [])
+ * @method ResponseInterface head(stringUriInterface $uri, array $options = [])
+ * @method ResponseInterface put(stringUriInterface $uri, array $options = [])
+ * @method ResponseInterface post(stringUriInterface $uri, array $options = [])
+ * @method ResponseInterface patch(stringUriInterface $uri, array $options = [])
+ * @method ResponseInterface delete(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface getAsync(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface headAsync(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface putAsync(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface postAsync(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface patchAsync(stringUriInterface $uri, array $options = [])
+ * @method Promise\PromiseInterface deleteAsync(stringUriInterface $uri, array $options = [])
  */
 class Client implements ClientInterface
 {
