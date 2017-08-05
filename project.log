@@ -156,5 +156,11 @@
     http://127.0.0.1:9200(服务器地址端口号)/ylaravel2(索引名称)/posts_index(索引类型名称)/4(索引文档唯一标识)
     注意访问es生成的索引文档时一定要匹配到正确的索引名称，索引类型等信息
 
+22. 视图合成器---->为了使视图公共页面的数据在页面载入时统一调用
+    1. 在\app\Providers\AppServiceProvider.php的boot方法中引入
+        \View::composer('layout.sidebar'===公共模板地址, function ($view) {
+                    $topics = \App\Topic::all();//公共数据
+                    $view->with('topics', $topics);//将公共数据传入模板
+                });
 
 
