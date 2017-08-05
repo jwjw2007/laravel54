@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : 127
 Source Server Version : 50553
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-04 15:36:47
+Date: 2017-08-05 22:48:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `comments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//评论表';
 
 -- ----------------------------
 -- Records of comments
@@ -50,13 +50,13 @@ CREATE TABLE `fans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//关注表';
 
 -- ----------------------------
 -- Records of fans
 -- ----------------------------
 INSERT INTO `fans` VALUES ('11', '2', '1', '2017-08-04 15:34:49', '2017-08-04 15:34:49');
-INSERT INTO `fans` VALUES ('8', '1', '2', '2017-08-04 15:33:52', '2017-08-04 15:33:52');
+INSERT INTO `fans` VALUES ('12', '1', '2', '2017-08-05 22:24:12', '2017-08-05 22:24:12');
 
 -- ----------------------------
 -- Table structure for `migrations`
@@ -67,7 +67,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -78,6 +78,8 @@ INSERT INTO `migrations` VALUES ('3', '2017_07_26_143716_create_posts_table', '1
 INSERT INTO `migrations` VALUES ('4', '2017_08_01_212242_create_comments_table', '2');
 INSERT INTO `migrations` VALUES ('5', '2017_08_02_084755_create_zans_table', '3');
 INSERT INTO `migrations` VALUES ('6', '2017_08_04_111823_create_fans_table', '4');
+INSERT INTO `migrations` VALUES ('7', '2017_08_05_224038_create_topic_table', '5');
+INSERT INTO `migrations` VALUES ('8', '2017_08_05_224104_create_post_topic_table', '5');
 
 -- ----------------------------
 -- Table structure for `password_resets`
@@ -106,7 +108,7 @@ CREATE TABLE `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//文章表';
 
 -- ----------------------------
 -- Records of posts
@@ -135,6 +137,39 @@ INSERT INTO `posts` VALUES ('22', 'dddddddddd', '<p>dddddddddddddddddddddddddd<b
 INSERT INTO `posts` VALUES ('26', '《麦田里的守望者》：独处的时候，藏着一个人最真实的人品', '<p>醒来后，霍尔顿先是给萨丽·海斯打电话，希望她能出来和自己约会。老萨丽同样是一个假模假式的姑娘。在答应霍尔顿一起看日戏后，老萨丽开始吹嘘什么“有个哈佛学生拼命追她，日日夜夜给她打电话”，还有“什么西点军校的，也为她寻死觅活”，同时呢似乎是为了显示矜持她又总是迟到。</p><p>这样的场景是不是在我们现实的生活里也很常见？一场社交，即使只有两个人，也是一次惊心动魄的博弈。通过迟到，通过显示自己有多么的受欢迎，来获得交际时的主动权。当然，如果约会双方确实存在地位差异（除去社会地位差异还有基本的邀请者地位低于被邀请者），那么这样的放肆将被忍受。</p><p>虽然我们的霍尔顿在心里想着，“一时间，我真想叫她忘记看日戏这回事吧”。可是霍尔顿也有自己的苦衷，他太无聊又太烦闷了，因而他不得不和假模假式的老萨丽约会。</p><p>“我跟老萨丽定好约会后，就从床上起来，穿好衣服，然后整理行装。我离开房间之前又往窗外望了望，看看所有那些心理变态的家伙都在干什么，可他们全把窗帘拉上了。到了早上，他们都成了谦虚谨慎的君子淑女。”</p><p>儒家思想里有个概念叫“慎独”，说的是一个人一旦独自待在一个没有其他人的地方，便会容易会想要做一些肮脏龌蹉，或者其他不被传统伦理道德接受的事情。因而君子要“慎独”，既要尽可能避免自己处于那种境地，也要在处于“独”境时保持警惕。</p><p>黑夜，独居，以及人的思想，这些都是“独”境，值得我们警惕。那么，霍尔顿接下来会有什么样的行为呢？</p><br><br><p>作者：麦家理想谷</p><br><p>链接：http://www.jianshu.com/p/333660fd41c9</p><br><p>來源：简书</p><br><p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><p><br></p>', '2', '2017-08-04 09:59:32', '2017-08-04 09:59:32');
 
 -- ----------------------------
+-- Table structure for `post_topics`
+-- ----------------------------
+DROP TABLE IF EXISTS `post_topics`;
+CREATE TABLE `post_topics` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL DEFAULT '0',
+  `topic_id` int(11) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//文章专题关系表';
+
+-- ----------------------------
+-- Records of post_topics
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `topics`
+-- ----------------------------
+DROP TABLE IF EXISTS `topics`;
+CREATE TABLE `topics` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//专题表';
+
+-- ----------------------------
+-- Records of topics
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `users`
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
@@ -148,7 +183,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//用户表';
 
 -- ----------------------------
 -- Records of users
@@ -167,7 +202,7 @@ CREATE TABLE `zans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//赞表';
 
 -- ----------------------------
 -- Records of zans
