@@ -59,5 +59,10 @@ Route::get('/posts/{post}/unzan', '\App\Http\Controllers\PostController@unzan');
 Route::get('/posts/{post}/delete', '\App\Http\Controllers\PostController@delete')
     ->where('post', '[0-9]+');
 
+//专题详情页
+Route::get('/topic/{topic}','\App\Http\Controllers\TopicController@show');
+//投稿
+Route::post('/topic/{topic}/submit','\App\Http\Controllers\TopicController@submit');
+
 
 
