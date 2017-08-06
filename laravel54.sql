@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-05 23:22:53
+Date: 2017-08-06 18:39:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -147,11 +147,19 @@ CREATE TABLE `post_topics` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//文章专题关系表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//文章专题关系表';
 
 -- ----------------------------
 -- Records of post_topics
 -- ----------------------------
+INSERT INTO `post_topics` VALUES ('1', '12', '1', '2017-08-06 18:38:35', '2017-08-06 18:38:35');
+INSERT INTO `post_topics` VALUES ('2', '14', '1', '2017-08-06 18:38:35', '2017-08-06 18:38:35');
+INSERT INTO `post_topics` VALUES ('3', '21', '1', '2017-08-06 18:38:40', '2017-08-06 18:38:40');
+INSERT INTO `post_topics` VALUES ('4', '22', '1', '2017-08-06 18:38:40', '2017-08-06 18:38:40');
+INSERT INTO `post_topics` VALUES ('5', '14', '2', '2017-08-06 18:38:49', '2017-08-06 18:38:49');
+INSERT INTO `post_topics` VALUES ('6', '16', '2', '2017-08-06 18:38:49', '2017-08-06 18:38:49');
+INSERT INTO `post_topics` VALUES ('7', '17', '2', '2017-08-06 18:38:49', '2017-08-06 18:38:49');
+INSERT INTO `post_topics` VALUES ('8', '22', '2', '2017-08-06 18:39:16', '2017-08-06 18:39:16');
 
 -- ----------------------------
 -- Table structure for `topics`
