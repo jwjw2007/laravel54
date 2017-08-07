@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127
+Source Server         : 127.0.0.1
 Source Server Version : 50553
-Source Host           : localhost:3306
+Source Host           : 127.0.0.1:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-06 18:39:53
+Date: 2017-08-07 18:09:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,13 +50,14 @@ CREATE TABLE `fans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//关注表';
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//关注表';
 
 -- ----------------------------
 -- Records of fans
 -- ----------------------------
 INSERT INTO `fans` VALUES ('11', '2', '1', '2017-08-04 15:34:49', '2017-08-04 15:34:49');
 INSERT INTO `fans` VALUES ('12', '1', '2', '2017-08-05 22:24:12', '2017-08-05 22:24:12');
+INSERT INTO `fans` VALUES ('13', '3', '2', '2017-08-07 15:16:15', '2017-08-07 15:16:15');
 
 -- ----------------------------
 -- Table structure for `migrations`
@@ -194,13 +195,14 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//用户表';
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'aaa', 'aaa@qq.com', '$2y$10$NzOS8J76rwKzANM0PgYFVeNBo.anL5iFo68wuiCz7TS56YqATSwDK', '1UE7KqW67WQNzjvYvzsMsavLxNfyGATLGdhbRXCA8GHBjxSzP4eUeUOUnQD5', '2017-07-31 13:56:12', '2017-07-31 13:56:12');
+INSERT INTO `users` VALUES ('1', 'aaa', 'aaa@qq.com', '$2y$10$NzOS8J76rwKzANM0PgYFVeNBo.anL5iFo68wuiCz7TS56YqATSwDK', 'FO2Sz7IT9atiKnh8VAbz0PhN8Tr2ikBfbQC7zS4s6hQjMnMO2gMZAf0AFF4r', '2017-07-31 13:56:12', '2017-07-31 13:56:12');
 INSERT INTO `users` VALUES ('2', 'qqq', 'qqq@qq.com', '$2y$10$BJQGELktbstTvGT2GEaK/Oczx95HwJWsMy5yT9aRJAjVzYtQxusQu', 'zwSYdZrdWgkEvvkvJAoLKrat27g5kWx5MpngaigPTKiGQ9d9f6TqlWD7qkqb', '2017-08-01 08:54:26', '2017-08-01 08:54:26');
+INSERT INTO `users` VALUES ('3', '111', '111@qq.com', '$2y$10$1mUFNZyLiMUdoNSb0xp7pOPdWyRgydC/q9CksDYdhEWo816bzqKPO', null, '2017-08-07 15:14:39', '2017-08-07 15:14:39');
 
 -- ----------------------------
 -- Table structure for `zans`
@@ -213,7 +215,7 @@ CREATE TABLE `zans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//赞表';
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//赞表';
 
 -- ----------------------------
 -- Records of zans
@@ -223,3 +225,6 @@ INSERT INTO `zans` VALUES ('4', '2', '2', '2017-08-02 09:14:00', '2017-08-02 09:
 INSERT INTO `zans` VALUES ('5', '6', '2', '2017-08-02 10:15:08', '2017-08-02 10:15:08');
 INSERT INTO `zans` VALUES ('6', '3', '1', '2017-08-02 17:01:20', '2017-08-02 17:01:20');
 INSERT INTO `zans` VALUES ('7', '22', '1', '2017-08-02 17:43:17', '2017-08-02 17:43:17');
+INSERT INTO `zans` VALUES ('9', '2', '3', '2017-08-07 15:14:56', '2017-08-07 15:14:56');
+INSERT INTO `zans` VALUES ('12', '10', '3', '2017-08-07 15:17:07', '2017-08-07 15:17:07');
+INSERT INTO `zans` VALUES ('11', '5', '3', '2017-08-07 15:15:14', '2017-08-07 15:15:14');
