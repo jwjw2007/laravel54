@@ -17,7 +17,7 @@
             </div>
 
             <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} by <a
-                        href="#">{{$post->user->name}}</a></p>
+                        href="/user/{{$post->user->id}}">{{$post->user->name}}</a></p>
             <p>{!!$post->content !!}</p>
             <div>
                 @if($post->zan(\Auth::id())->exists())
