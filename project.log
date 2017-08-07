@@ -162,5 +162,7 @@
                     $topics = \App\Topic::all();//公共数据
                     $view->with('topics', $topics);//将公共数据传入模板
                 });
+23. 后台推荐页面项目：
+    https://github.com/almasaeed2010/AdminLTE
 
 
