@@ -164,5 +164,8 @@
                 });
 23. 后台推荐页面项目：
     https://github.com/almasaeed2010/AdminLTE
+24.  使用auth登录认证时，auth中间件未登录跳转链接可以进行修改：
+    D:\phpStudy\WWW\laravel54\app\Exceptions\Handler.php\
+    unauthenticated方法中可进行自定义，修改成路由配置文件中定义的路由名字即可。
 
 
