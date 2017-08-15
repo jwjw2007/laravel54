@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-15 10:04:29
+Date: 2017-08-15 11:20:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,11 +26,12 @@ CREATE TABLE `admin_users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_users
 -- ----------------------------
+INSERT INTO `admin_users` VALUES ('1', 'admin', '$2y$10$JpYn6lDGXO1HQKh2qGJl2.FUcr5b4Y/TD6sGEaFwUaVO2auQtn6ee', '2017-08-15 11:17:37', '2017-08-15 11:17:37');
 
 -- ----------------------------
 -- Table structure for `comments`
