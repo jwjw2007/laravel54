@@ -352,6 +352,9 @@ class ComposerStaticInit6b9ecea1979e7318be137942b2aeab1f
     );
 
     public static $classMap = array (
+        'App\\Admin\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Admin/Controllers/Controller.php',
+        'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
+        'App\\Admin\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Admin/Controllers/LoginController.php',
         'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Commands\\ESInit' => __DIR__ . '/../..' . '/app/Console/Commands/EsInit.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -416,6 +419,7 @@ class ComposerStaticInit6b9ecea1979e7318be137942b2aeab1f
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'CreateAdminUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_15_100148_create_admin_users_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_01_212242_create_comments_table.php',
         'CreateFansTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_04_111823_create_fans_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

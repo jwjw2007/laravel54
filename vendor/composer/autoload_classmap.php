@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin\\Controllers\\Controller' => $baseDir . '/app/Admin/Controllers/Controller.php',
+    'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
+    'App\\Admin\\Controllers\\LoginController' => $baseDir . '/app/Admin/Controllers/LoginController.php',
     'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Commands\\ESInit' => $baseDir . '/app/Console/Commands/EsInit.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -70,6 +73,7 @@ return array(
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+    'CreateAdminUsersTable' => $baseDir . '/database/migrations/2017_08_15_100148_create_admin_users_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2017_08_01_212242_create_comments_table.php',
     'CreateFansTable' => $baseDir . '/database/migrations/2017_08_04_111823_create_fans_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
