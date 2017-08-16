@@ -20,24 +20,19 @@
                             <th>用户名称</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>test1</td>
-                            <td>
-                                <a type="button" class="btn" href="/admin/users/2/role">角色管理</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>test2</td>
-                            <td>
-                                <a type="button" class="btn" href="/admin/users/3/role">角色管理</a>
-                            </td>
-                        </tr>
+                        @foreach($users as $user)
+                            <tr>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>
+                                    <a type="button" class="btn" href="/admin/users/{{$user->id}}/role">角色管理</a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
-
+                {{$users->links()}}
             </div>
         </div>
     </div>

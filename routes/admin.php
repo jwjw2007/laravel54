@@ -19,6 +19,6 @@ Route::group(['prefix' => 'admin'], function () {
         //添加
         Route::get('/users/create','\App\Admin\Controllers\UserController@create');
         //保存
-        Route::get('/users/store','\App\Admin\Controllers\UserController@store');
+        Route::post('/users/store','\App\Admin\Controllers\UserController@store');
     });
 });
