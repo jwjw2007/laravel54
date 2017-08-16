@@ -12,5 +12,13 @@ Route::group(['prefix' => 'admin'], function () {
     //需要登陆的
     Route::group(['middleware' => 'auth:admin'], function(){
         Route::get('/home', '\App\Admin\Controllers\HomeController@index');
+
+        //管理人员
+        //列表
+        Route::get('/users','\App\Admin\Controllers\UserController@index');
+        //添加
+        Route::get('/users/create','\App\Admin\Controllers\UserController@create');
+        //保存
+        Route::get('/users/store','\App\Admin\Controllers\UserController@store');
     });
 });
