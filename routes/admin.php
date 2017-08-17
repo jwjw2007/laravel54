@@ -20,5 +20,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/users/create','\App\Admin\Controllers\UserController@create');
         //保存
         Route::post('/users/store','\App\Admin\Controllers\UserController@store');
+
+        //审核模块
+        Route::get('/posts','\App\Admin\Controllers\PostController@index');
+        Route::get('/posts/{post}/status','\App\Admin\Controllers\PostController@status');
     });
 });
