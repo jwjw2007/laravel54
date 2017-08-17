@@ -352,9 +352,12 @@ class ComposerStaticInit6b9ecea1979e7318be137942b2aeab1f
     );
 
     public static $classMap = array (
+        'AlterPostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_08_17_140815_alter_posts_table.php',
+        'App\\AdminUser' => __DIR__ . '/../..' . '/app/AdminUser.php',
         'App\\Admin\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Admin/Controllers/Controller.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Admin/Controllers/LoginController.php',
+        'App\\Admin\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UserController.php',
         'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Commands\\ESInit' => __DIR__ . '/../..' . '/app/Console/Commands/EsInit.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',

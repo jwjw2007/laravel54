@@ -6,9 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AlterPostsTable' => $baseDir . '/database/migrations/2017_08_17_140815_alter_posts_table.php',
+    'App\\AdminUser' => $baseDir . '/app/AdminUser.php',
     'App\\Admin\\Controllers\\Controller' => $baseDir . '/app/Admin/Controllers/Controller.php',
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\LoginController' => $baseDir . '/app/Admin/Controllers/LoginController.php',
+    'App\\Admin\\Controllers\\UserController' => $baseDir . '/app/Admin/Controllers/UserController.php',
     'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Commands\\ESInit' => $baseDir . '/app/Console/Commands/EsInit.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',

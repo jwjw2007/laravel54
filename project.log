@@ -156,6 +156,9 @@
     http://127.0.0.1:9200(服务器地址端口号)/ylaravel2(索引名称)/posts_index(索引类型名称)/4(索引文档唯一标识)
     注意访问es生成的索引文档时一定要匹配到正确的索引名称，索引类型等信息
 
+    head插件的安装：
+    http://www.cnblogs.com/xuxy03/p/6039999.html
+
 22. 视图合成器---->为了使视图公共页面的数据在页面载入时统一调用
     1. 在\app\Providers\AppServiceProvider.php的boot方法中引入
         \View::composer('layout.sidebar'===公共模板地址, function ($view) {
@@ -167,5 +170,7 @@
 24.  使用auth登录认证时，auth中间件未登录跳转链接可以进行修改：
     D:\phpStudy\WWW\laravel54\app\Exceptions\Handler.php\
     unauthenticated方法中可进行自定义，修改成路由配置文件中定义的路由名字即可。
+
+25. 关于文章的审核多用于“先发后审”
 
 
