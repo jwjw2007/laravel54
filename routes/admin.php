@@ -23,6 +23,6 @@ Route::group(['prefix' => 'admin'], function () {
 
         //审核模块
         Route::get('/posts','\App\Admin\Controllers\PostController@index');
-        Route::get('/posts/{post}/status','\App\Admin\Controllers\PostController@status');
+        Route::post('/posts/{post}/status','\App\Admin\Controllers\PostController@status');
     });
 });
