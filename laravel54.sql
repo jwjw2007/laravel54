@@ -10,10 +10,78 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-17 14:52:46
+Date: 2017-08-18 15:23:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `admin_permissions`
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_permissions`;
+CREATE TABLE `admin_permissions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of admin_permissions
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `admin_permission_role`
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_permission_role`;
+CREATE TABLE `admin_permission_role` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of admin_permission_role
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `admin_roles`
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_roles`;
+CREATE TABLE `admin_roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of admin_roles
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `admin_role_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `admin_role_user`;
+CREATE TABLE `admin_role_user` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of admin_role_user
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `admin_users`
@@ -96,7 +164,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -111,6 +179,7 @@ INSERT INTO `migrations` VALUES ('7', '2017_08_05_224038_create_topic_table', '5
 INSERT INTO `migrations` VALUES ('8', '2017_08_05_224104_create_post_topic_table', '5');
 INSERT INTO `migrations` VALUES ('9', '2017_08_15_100148_create_admin_users_table', '6');
 INSERT INTO `migrations` VALUES ('10', '2017_08_17_140815_alter_posts_table', '7');
+INSERT INTO `migrations` VALUES ('11', '2017_08_18_151536_create_permission_and_roles', '8');
 
 -- ----------------------------
 -- Table structure for `password_resets`
