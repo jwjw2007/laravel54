@@ -29,4 +29,15 @@ class UserController extends Controller {
 
         return redirect('/admin/users');
     }
+
+    //用户-角色页面
+    public function role() {
+        return view('/admin/user/role');
+    }
+
+    //用户-角色操作
+    public function storeRole() {
+
+    }
+
 }
