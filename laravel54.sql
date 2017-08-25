@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-21 18:16:40
+Date: 2017-08-25 13:56:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,11 +26,15 @@ CREATE TABLE `admin_permissions` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_permissions
 -- ----------------------------
+INSERT INTO `admin_permissions` VALUES ('1', 'system', '系统管理', '2017-08-25 13:23:40', '2017-08-25 13:23:40');
+INSERT INTO `admin_permissions` VALUES ('2', 'post', '文章管理', '2017-08-25 13:24:03', '2017-08-25 13:24:03');
+INSERT INTO `admin_permissions` VALUES ('3', 'topic', '专题管理', '2017-08-25 13:24:16', '2017-08-25 13:24:16');
+INSERT INTO `admin_permissions` VALUES ('4', 'notice', '通知管理', '2017-08-25 13:24:25', '2017-08-25 13:24:25');
 
 -- ----------------------------
 -- Table structure for `admin_permission_role`
@@ -43,11 +47,18 @@ CREATE TABLE `admin_permission_role` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_permission_role
 -- ----------------------------
+INSERT INTO `admin_permission_role` VALUES ('1', '1', '1', null, null);
+INSERT INTO `admin_permission_role` VALUES ('2', '1', '2', null, null);
+INSERT INTO `admin_permission_role` VALUES ('3', '1', '3', null, null);
+INSERT INTO `admin_permission_role` VALUES ('4', '1', '4', null, null);
+INSERT INTO `admin_permission_role` VALUES ('5', '2', '2', null, null);
+INSERT INTO `admin_permission_role` VALUES ('6', '3', '3', null, null);
+INSERT INTO `admin_permission_role` VALUES ('7', '4', '4', null, null);
 
 -- ----------------------------
 -- Table structure for `admin_roles`
@@ -60,11 +71,15 @@ CREATE TABLE `admin_roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_roles
 -- ----------------------------
+INSERT INTO `admin_roles` VALUES ('1', 'sys-manager', '系统管理员', '2017-08-25 13:25:06', '2017-08-25 13:25:06');
+INSERT INTO `admin_roles` VALUES ('2', 'post-manager', '文章管理员', '2017-08-25 13:31:22', '2017-08-25 13:31:22');
+INSERT INTO `admin_roles` VALUES ('3', 'topic-manager', '专题管理', '2017-08-25 13:54:53', '2017-08-25 13:54:53');
+INSERT INTO `admin_roles` VALUES ('4', 'notice-manager', '通知管理', '2017-08-25 13:55:13', '2017-08-25 13:55:13');
 
 -- ----------------------------
 -- Table structure for `admin_role_user`
@@ -77,11 +92,18 @@ CREATE TABLE `admin_role_user` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_role_user
 -- ----------------------------
+INSERT INTO `admin_role_user` VALUES ('1', '1', '2', null, null);
+INSERT INTO `admin_role_user` VALUES ('2', '2', '3', null, null);
+INSERT INTO `admin_role_user` VALUES ('3', '1', '1', null, null);
+INSERT INTO `admin_role_user` VALUES ('4', '2', '1', null, null);
+INSERT INTO `admin_role_user` VALUES ('5', '2', '4', null, null);
+INSERT INTO `admin_role_user` VALUES ('6', '3', '1', null, null);
+INSERT INTO `admin_role_user` VALUES ('7', '4', '1', null, null);
 
 -- ----------------------------
 -- Table structure for `admin_users`

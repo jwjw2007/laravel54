@@ -33,7 +33,7 @@ class RoleController extends Controller {
 
         $permissions = \App\AdminPermission::all();
         $myPermissions = $role->permissions;
-
+        
         return view('/admin/role/permission', compact('permissions', 'myPermissions', 'role'));
     }
 

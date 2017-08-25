@@ -22,7 +22,7 @@
                                             <input type="checkbox" name="permissions[]"
                                                    @if($myPermissions->contains($permission))
                                                    checked
-                                                   @endforeach
+                                                   @endif
                                                    value="{{$permission->id}}">
                                             {{$permission->name}}
                                         </label>
