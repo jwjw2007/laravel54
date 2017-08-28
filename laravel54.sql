@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-25 13:56:01
+Date: 2017-08-28 14:07:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -294,14 +294,13 @@ CREATE TABLE `topics` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//专题表';
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='//专题表';
 
 -- ----------------------------
 -- Records of topics
 -- ----------------------------
 INSERT INTO `topics` VALUES ('1', '旅游', '2017-08-05 23:17:03', '2017-08-05 23:17:06');
 INSERT INTO `topics` VALUES ('2', '经典', '2017-08-05 23:17:30', '2017-08-05 23:17:33');
-INSERT INTO `topics` VALUES ('3', 'aaaaa', '2017-08-05 23:19:24', '2017-08-05 23:19:24');
 
 -- ----------------------------
 -- Table structure for `users`

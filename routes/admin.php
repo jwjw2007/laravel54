@@ -41,5 +41,14 @@ Route::group(['prefix' => 'admin'], function () {
             Route::post('/posts/{post}/status', '\App\Admin\Controllers\PostController@status');
         });
 
+        //专题管理(使用了资源路由)
+        Route::group(['middleware' => 'can:topic'], function () {
+            Route::resource('topics', '\App\Admin\Controllers\TopicController', ['only' => [
+                'index', 'create', 'store', 'destroy'
+            ]]);
+        }
+        );
+
+
     });
 });
