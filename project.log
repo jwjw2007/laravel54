@@ -210,3 +210,31 @@
             nohup php artisan queue:work >>/dev/null &
         或者使用supervisor 进行进程监控
 
+28. 关于优化：
+    1. 路由缓存优化
+        php artisan route:cache
+    2. 配置缓存优化
+        php artisan config:cache
+    3. 优化类加载
+        php artisan optimize
+
+    4. 使用debugbar,调试费时非常好用，类似TP的trace模式
+        https://github.com/barryvdh/laravel-debugbar
+        4.1 composer require barryvdh/laravel-debugbar --dev
+        4.2 配置ServiceProvider====>E:\WWW\laravel54\config\app.php
+             Barryvdh\Debugbar\ServiceProvider::class,
+        4.2  php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
+    5. 预加载
+        with和load方法
+    6. 慢sql查询
+        E:\WWW\laravel54\app\Providers\AppServiceProvider.php
+        设置DB的listen监听
+            //慢sql查询并记录日志
+
+                   \DB::listen(function ($query) {
+                       $sql = $query->sql;
+                       $bindings = $query->bindings;
+                       $time = $query->time;
+                       \Log::debug(var_export(compact('sql', 'bindings', 'time'), true));
+                   });
