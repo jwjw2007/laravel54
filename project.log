@@ -177,5 +177,36 @@
     权限粒度---->最小权限单元(页面级别，模块级别，按钮级别)，并不是权限粒度越小越好；
     用户----角色----权限
 
+27. 使用消息队列
+    1. 修改配置驱动
+        /laravel54/.env/QUEUE_DRIVER=database  ====修改驱动
+    2. 创建queue表
+        php artisan queue:table
+        php artisan migrate
+        生成表：jobs
+    3. 创建任务SendMessage
+        php artisan make:job SendMessage
+        E:\WWW\laravel54\app\Jobs\SendMessage.php
 
+    4. 发送消息逻辑
+        E:\WWW\laravel54\app\Admin\Controllers\NoticeController.php
+
+            public function store() {
+                    $this->validate(request(), [
+                        'title' => 'required|string',
+                        'content' => 'required|string'
+                    ]);
+
+                    $notice = \App\Notice::create(request(['title', 'content']));
+                    //发送创建的消息
+                    dispatch(new \App\Jobs\SendMessage($notice));
+
+                    return redirect('/admin/notices');
+                }
+
+    5. 启动队列
+        php artisan queue:work
+        常驻内存：
+            nohup php artisan queue:work >>/dev/null &
+        或者使用supervisor 进行进程监控
 

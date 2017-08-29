@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : 127
 Source Server Version : 50553
-Source Host           : 127.0.0.1:3306
+Source Host           : localhost:3306
 Source Database       : laravel54
 
 Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-29 13:50:32
+Date: 2017-08-29 22:40:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -178,6 +178,26 @@ INSERT INTO `fans` VALUES ('12', '1', '2', '2017-08-05 22:24:12', '2017-08-05 22
 INSERT INTO `fans` VALUES ('13', '3', '2', '2017-08-07 15:16:15', '2017-08-07 15:16:15');
 
 -- ----------------------------
+-- Table structure for `jobs`
+-- ----------------------------
+DROP TABLE IF EXISTS `jobs`;
+CREATE TABLE `jobs` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `queue` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attempts` tinyint(3) unsigned NOT NULL,
+  `reserved_at` int(10) unsigned DEFAULT NULL,
+  `available_at` int(10) unsigned NOT NULL,
+  `created_at` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of jobs
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `migrations`
 -- ----------------------------
 DROP TABLE IF EXISTS `migrations`;
@@ -186,7 +206,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -203,6 +223,7 @@ INSERT INTO `migrations` VALUES ('9', '2017_08_15_100148_create_admin_users_tabl
 INSERT INTO `migrations` VALUES ('10', '2017_08_17_140815_alter_posts_table', '7');
 INSERT INTO `migrations` VALUES ('11', '2017_08_18_151536_create_permission_and_roles', '8');
 INSERT INTO `migrations` VALUES ('12', '2017_08_29_085733_create_notice_table', '9');
+INSERT INTO `migrations` VALUES ('13', '2017_08_29_222710_create_jobs_table', '10');
 
 -- ----------------------------
 -- Table structure for `notices`
@@ -215,11 +236,12 @@ CREATE TABLE `notices` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of notices
 -- ----------------------------
+INSERT INTO `notices` VALUES ('1', 'ddddddddddddd', '水电费水电费双待所发生的', '2017-08-29 22:34:28', '2017-08-29 22:34:28');
 
 -- ----------------------------
 -- Table structure for `password_resets`
@@ -354,11 +376,14 @@ CREATE TABLE `user_notice` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of user_notice
 -- ----------------------------
+INSERT INTO `user_notice` VALUES ('1', '1', '1', null, null);
+INSERT INTO `user_notice` VALUES ('2', '2', '1', null, null);
+INSERT INTO `user_notice` VALUES ('3', '3', '1', null, null);
 
 -- ----------------------------
 -- Table structure for `zans`
