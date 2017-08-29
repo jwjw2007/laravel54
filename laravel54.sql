@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-08-28 14:07:06
+Date: 2017-08-29 09:07:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -186,7 +186,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -202,6 +202,24 @@ INSERT INTO `migrations` VALUES ('8', '2017_08_05_224104_create_post_topic_table
 INSERT INTO `migrations` VALUES ('9', '2017_08_15_100148_create_admin_users_table', '6');
 INSERT INTO `migrations` VALUES ('10', '2017_08_17_140815_alter_posts_table', '7');
 INSERT INTO `migrations` VALUES ('11', '2017_08_18_151536_create_permission_and_roles', '8');
+INSERT INTO `migrations` VALUES ('12', '2017_08_29_085733_create_notice_table', '9');
+
+-- ----------------------------
+-- Table structure for `notices`
+-- ----------------------------
+DROP TABLE IF EXISTS `notices`;
+CREATE TABLE `notices` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `content` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of notices
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `password_resets`
@@ -324,6 +342,23 @@ CREATE TABLE `users` (
 INSERT INTO `users` VALUES ('1', 'aaa', 'aaa@qq.com', '$2y$10$NzOS8J76rwKzANM0PgYFVeNBo.anL5iFo68wuiCz7TS56YqATSwDK', 'FO2Sz7IT9atiKnh8VAbz0PhN8Tr2ikBfbQC7zS4s6hQjMnMO2gMZAf0AFF4r', '2017-07-31 13:56:12', '2017-07-31 13:56:12');
 INSERT INTO `users` VALUES ('2', 'qqq', 'qqq@qq.com', '$2y$10$BJQGELktbstTvGT2GEaK/Oczx95HwJWsMy5yT9aRJAjVzYtQxusQu', 'zwSYdZrdWgkEvvkvJAoLKrat27g5kWx5MpngaigPTKiGQ9d9f6TqlWD7qkqb', '2017-08-01 08:54:26', '2017-08-01 08:54:26');
 INSERT INTO `users` VALUES ('3', '111', '111@qq.com', '$2y$10$1mUFNZyLiMUdoNSb0xp7pOPdWyRgydC/q9CksDYdhEWo816bzqKPO', null, '2017-08-07 15:14:39', '2017-08-07 15:14:39');
+
+-- ----------------------------
+-- Table structure for `user_notice`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_notice`;
+CREATE TABLE `user_notice` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `notice_id` int(11) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of user_notice
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `zans`
