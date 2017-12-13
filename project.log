@@ -13,6 +13,9 @@
 4. 创建数据库迁移文件表:
     php artisan migrate:install
 
+    数据库名称：laravel54
+    后台管理员：admin/123456
+
 5. 现在安装完成后进行nginx配置:
     location / {
         try_files $uri $uri/ /index.php?$query_string;
