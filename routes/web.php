@@ -17,12 +17,13 @@ Route::get('/register', 'RegisterController@index');
 //注册行为
 Route::post('/register', 'RegisterController@register');
 //登录页面
-Route::get('/login', 'LoginController@index');
+Route::get('/login', 'LoginController@index')->name('login');
 //登录行为
 Route::post('/login', 'LoginController@login');
 //登出行为
 Route::get('/logout', 'LoginController@logout');
 
+Route::get('/', '\App\Http\Controllers\PostController@index');
 
 Route::group(['middleware' => 'auth:web'], function () {
 

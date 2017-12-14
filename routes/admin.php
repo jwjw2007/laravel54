@@ -3,7 +3,7 @@
 Route::group(['prefix' => 'admin'], function () {
     //登录页
     Route::get('/login', '\App\Admin\Controllers\LoginController@index')
-        ->name('login');
+        ->name('adminlogin');
     //登录
     Route::post('/login', '\App\Admin\Controllers\LoginController@login');
     //登出
