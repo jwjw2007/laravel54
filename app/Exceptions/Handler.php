@@ -60,6 +60,7 @@ class Handler extends ExceptionHandler
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
+        //auth验证失败的跳转地址
         return redirect()->guest(route('login'));
     }
 }
